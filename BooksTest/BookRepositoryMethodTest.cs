@@ -43,7 +43,7 @@ namespace BooksTest
         {
             //act
             List<Book> actual = _sut.RetriveAllOrderByYearAscending();
-            Assert.Equals(1990, actual[0].Year);
+            Assert.IsTrue(1990 == actual[0].Year);
         }
 
         [TestMethod]
@@ -51,7 +51,7 @@ namespace BooksTest
         {
             //act
             List<Book> actual = _sut.RetriveAllOrderByYearDescending();
-            Assert.Equals(1997, actual[0].Year);
+            Assert.IsTrue(1997 == actual[0].Year);
         }
 
         [TestMethod]
@@ -59,7 +59,7 @@ namespace BooksTest
         {
             //act
             List<Book> actual = _sut.RetriveAllOrderByPriceAscending();
-            Assert.Equals(100, actual[0].Price);
+            Assert.IsTrue(100 == actual[0].Price);
         }
 
         [TestMethod]
@@ -67,7 +67,7 @@ namespace BooksTest
         {
             //act
             List<Book> actual = _sut.RetriveAllOrderByPriceDescending();
-            Assert.Equals(400, actual[0].Price);
+            Assert.IsTrue(400 == actual[0].Price);
         }
     }
 }
